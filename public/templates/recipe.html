@@ -1,5 +1,17 @@
-<h2>Recipe</h2>
+<h2>Inventory</h2>
 
-<p>Please add a recipe</p>
 
-{{ master }}
+<h3>add a recipe</h3>
+<form>
+  Recipe Name: <input type="text" ng-model="recipe.name" /><br/>
+  Ingredients: <input type="text" ng-model="recipe.type" /><br/>
+  Amount: <input type="number" ng-model="recipe.amount" /><br/>
+  How's it measured? <input type="text" ng-model="recipe.measure" /><br/>
+  <button ng-click="update(recipe)">Add it</button>
+</form>
+<pre>form = {{ recipe | json}}</pre>
+
+<h3>Existing inventory</h3>
+<pre>master = {{ recipes | json}}</pre>
+
+<pre>{{ recipes }}</pre>

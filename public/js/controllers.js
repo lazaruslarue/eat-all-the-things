@@ -11,11 +11,18 @@ angular.module('recipeApp')
   })
   .controller('Recipe', function($scope, $http, $cookieStore) {
     $scope.name = 'Recipe list!';
+    $scope.recipes = $cookieStore.get('recipes') || [];
+    //TODO: put this in a service 
+    $scope.update = function(recipe) {
+      $scope.recipes.push( angular.copy(recipe) );
+      $cookieStore.put('recipes', $scope.recipes)
+      $scope.recipes = $cookieStore.get('recipes')
+    };
 
   })
   .controller('Inventory', function($scope, $http, $cookieStore) {
     $scope.name = 'Your inventory list!';
-    $scope.foods = $cookieStore.get('items');
+    $scope.foods = $cookieStore.get('items') || [];
     //TODO: put this in a service that handles 
     // duplicate ingredients 
     $scope.update = function(ingredient) {
