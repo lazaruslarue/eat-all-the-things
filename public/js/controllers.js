@@ -11,14 +11,22 @@ angular.module('recipeApp')
   })
   .controller('Recipe', function($scope, $http, $cookieStore) {
     $scope.name = 'Recipe list!';
-    $scope.recipes = $cookieStore.get('recipes') || [];
-    //TODO: put this in a service 
+    $scope.menu = $cookieStore.get('menu') || [];
+    //TODO: put this in a service
+    var thing = $scope.recipe = {
+      name: '',
+      ingredients: [{name: '',amount: ''}],
+      instructions: ''
+    }
+    // $scope.count = [3,2,1]; 
     $scope.update = function(recipe) {
-      $scope.recipes.push( angular.copy(recipe) );
-      $cookieStore.put('recipes', $scope.recipes)
-      $scope.recipes = $cookieStore.get('recipes')
+      $scope.menu.push( angular.copy(recipe) );
+      $cookieStore.put('menu', $scope.menu);
+      $scope.menu = $cookieStore.get('menu');
     };
-
+    $scope.addItem = function(ingredient){
+      $scope.recipe.ingredients.push({name: '',amount: ''});
+    } 
   })
   .controller('Inventory', function($scope, $http, $cookieStore) {
     $scope.name = 'Your inventory list!';
@@ -27,8 +35,8 @@ angular.module('recipeApp')
     // duplicate ingredients 
     $scope.update = function(ingredient) {
       $scope.foods.push( angular.copy(ingredient) );
-      $cookieStore.put('items', $scope.foods)
-      $scope.foods = $cookieStore.get('items')
+      $cookieStore.put('items', $scope.foods);
+      $scope.foods = $cookieStore.get('items');
     };
   }).
   controller('Ingredient', function($scope, $http, $cookieStore) {
