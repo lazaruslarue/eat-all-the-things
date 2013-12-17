@@ -15,18 +15,14 @@ angular.module('recipeApp')
   })
   .controller('Inventory', function($scope, $http, $cookieStore) {
     $scope.name = 'Your inventory list!';
-    $scope.master = [];
-    $scope.test = $cookieStore.get('items')
+    $scope.foods = $cookieStore.get('items');
     //TODO: put this in a service that handles 
     // duplicate ingredients 
     $scope.update = function(ingredient) {
-      $scope.master.push( angular.copy(ingredient) );
-      $cookieStore.put('items', $scope.master)
-      
+      $scope.foods.push( angular.copy(ingredient) );
+      $cookieStore.put('items', $scope.foods)
+      $scope.foods = $cookieStore.get('items')
     };
-    $scope.reset = function(ingredient) {
-      $scope.user = angular.copy($scope.master);
-    }
   }).
   controller('Ingredient', function($scope, $http, $cookieStore) {
     $scope.name = 'Show me the ingredients';
