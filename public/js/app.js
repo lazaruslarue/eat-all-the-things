@@ -1,5 +1,7 @@
-angular.module('recipeApp',[ngRoute])
-  .config(function($routeProvider) {
+angular.module('recipeApp',
+  ['ngRoute']
+  )
+  .config(['$routeProvider',function($routeProvider) {
     $routeProvider
       .when('/', {
         controller: 'Main',
@@ -9,6 +11,4 @@ angular.module('recipeApp',[ngRoute])
         controller: 'Recipe',
         templateURL: 'templates/recipe.html'
       })
-  })
-
-  
+  }])

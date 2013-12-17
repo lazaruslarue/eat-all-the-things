@@ -1,0 +1,45 @@
+body {
+	background-color: gray;
+}
+
+#container {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#containerLeft{
+	float:left;
+	width: 50%;
+}
+
+#containerRight{
+	float:right;
+	
+}
+
+#inventoryHere {
+/*	float: right;*/
+	background-color: red;
+}
+
+#addedIngredientHere {
+	/*float: right;*/
+	background-color: yellow
+}
+
+#recipeMatches {
+	background-color: blue;
+}
+
+#recipeList {
+	background-color: pink;
+}
+
+#fridgeForm {
+	/*float: left;*/
+}
+
+td {
+	background-color: white;
+
+}

@@ -8,5 +8,10 @@
     "start": "node server.js"
   },
   "author": "Jesse F LaRue",
-  "license": "BSD"
+  "license": "BSD",
+  "dependencies": {
+    "mime": "~1.2.11",
+    "express": "3.4.7",
+    "jade": "*"
+  }
 }
