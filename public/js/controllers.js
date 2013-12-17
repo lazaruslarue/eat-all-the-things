@@ -1,7 +1,33 @@
 angular.module('recipeApp')
-  .controller('Main', function($scope, $http){
-    console.log('wtf? recipe module')
-    $scope.name = 'kdjfkdjfkdjain';
-    
-    
+  .controller('Main', function($scope, $http, $cookieStore){
+    $scope.name = 'Fridge App!';
+    // $http({
+    //   method: 'GET',
+    //   url: '/storage'
+    // })
+    // .then(function(data) {
+    //   $scope.items = data.data;
+    // })
+  })
+  .controller('Recipe', function($scope, $http, $cookieStore) {
+    $scope.name = 'Recipe list!';
+
+  })
+  .controller('Inventory', function($scope, $http, $cookieStore) {
+    $scope.name = 'Your inventory list!';
+    $scope.master = [];
+    $scope.test = $cookieStore.get('items')
+    //TODO: put this in a service that handles 
+    // duplicate ingredients 
+    $scope.update = function(ingredient) {
+      $scope.master.push( angular.copy(ingredient) );
+      $cookieStore.put('items', $scope.master)
+      
+    };
+    $scope.reset = function(ingredient) {
+      $scope.user = angular.copy($scope.master);
+    }
+  }).
+  controller('Ingredient', function($scope, $http, $cookieStore) {
+    $scope.name = 'Show me the ingredients';
   })

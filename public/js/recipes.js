@@ -30,15 +30,13 @@ var Recipe = function(name, ingredients, instructions){
 		ingredients:		ingredients,
 		instructions:		instructions,
 		listIngredients:	function() { // list the ingredients for this recipe
-								for (i = 0;i<this.ingredients.length;i++){
-									console.log(this.ingredients[i]);
-								}
-							},
-		myName:				function (){
-								return name;
-							}
-
-
+		  for (i = 0;i<this.ingredients.length;i++){
+			  console.log(this.ingredients[i]);
+			}
+		},
+		myName: function (){
+      return name;
+    }
 	};
 };
 

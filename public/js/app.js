@@ -1,5 +1,5 @@
 angular.module('recipeApp',
-  ['ngRoute']
+  ['ngRoute', 'ngCookies']
   )
   .config(function($routeProvider) {
     $routeProvider
@@ -10,6 +10,10 @@ angular.module('recipeApp',
       .when('/recipe',{
         controller: 'Recipe',
         templateUrl: 'templates/recipe.html'
+      })
+      .when('/inventory',{
+        controller: 'Inventory',
+        templateUrl: 'templates/inventory.html'
       })
       .otherwise({
         redirectTo: '/'
