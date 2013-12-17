@@ -1,5 +1,5 @@
 angular.module('recipeApp')
-.factory('LinkService', function($q, $http){ 
+.factory('FilterService', function($q, $http, $scope){ 
 
   var service = {
     getInventory: function () {

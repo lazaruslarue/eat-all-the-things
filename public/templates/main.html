@@ -1,12 +1,13 @@
 <h3>EAT ALL THE THINGS</h3>
 
 <h4>recipes</h4>
-<div ng-repeat="recipe in menu" > <h4> heres a recipe </h4>
+
+<div ng-repeat="recipe in menu " > <h4> heres a recipe </h4>
+<div> Can be made: {{ recipe.haveIngredients }} </div>
   <div ng-repeat="ingredient in recipe.ingredients" > {{ ingredient.type }} </div>
   <div> Here's what to do: {{ recipe.instructions }} </div>
-  </div>
-<h4>in the fridge</h4>
-
-<div ng-repeat="food in items" > heres an ingredient you have 
-
 </div>
+
+<h4>your ingredients:</h4>
+<div ng-repeat="food in items" > {{food.name}} </div>
+

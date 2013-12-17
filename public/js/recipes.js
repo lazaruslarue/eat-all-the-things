@@ -20,8 +20,6 @@ var Ingredient = function(name, type, amount, measure){
 	};
 };
 
-
-
 // recipe constructor
 
 var Recipe = function(name, ingredients, instructions){
