@@ -1,13 +1,11 @@
 angular.module('recipeApp')
   .controller('Main', function($scope, $http, $cookieStore){
     $scope.name = 'Fridge App!';
-    // $http({
-    //   method: 'GET',
-    //   url: '/storage'
-    // })
-    // .then(function(data) {
-    //   $scope.items = data.data;
-    // })
+    $scope.menu = $cookieStore.get('menu');
+    $scope.items = $cookieStore.get('items');
+
+
+
   })
   .controller('Recipe', function($scope, $http, $cookieStore) {
     $scope.name = 'Recipe list!';
@@ -16,9 +14,9 @@ angular.module('recipeApp')
     var thing = $scope.recipe = {
       name: '',
       ingredients: [{name: '',amount: ''}],
+      //TODO: make instructions array. 
       instructions: ''
     }
-    // $scope.count = [3,2,1]; 
     $scope.update = function(recipe) {
       $scope.menu.push( angular.copy(recipe) );
       $cookieStore.put('menu', $scope.menu);
@@ -26,7 +24,10 @@ angular.module('recipeApp')
     };
     $scope.addItem = function(ingredient){
       $scope.recipe.ingredients.push({name: '',amount: ''});
-    } 
+    };
+    $scope.removeItem = function(ingredient) {
+      
+    }
   })
   .controller('Inventory', function($scope, $http, $cookieStore) {
     $scope.name = 'Your inventory list!';
