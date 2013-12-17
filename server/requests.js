@@ -1,6 +1,5 @@
 var url = require('url');
-var fs = require('fs');
-var path = require('path');
+var fs = require("fs");
 var index = fs.readFileSync('index.html');
 
 var headers = {
