@@ -1,41 +1,67 @@
 body {
-	background-color: gray;
 	font-family: sans-serif;
 	padding: 10px 60px 10px 60px;
 }
 
-#inventory {
+.inventory {
 /*	float: right;*/
-	background-color: pink;
-}
-
-#addedIngredientHere {
-	/*float: right;*/
-	background-color: yellow
-}
-
-#recipeMatches {
-	background-color: blue;
-}
-
-#recipeList {
-	background-color: pink;
-}
-
-#fridgeForm {
-	/*float: left;*/
-}
-
-td {
-	background-color: white;
+	background-image: linear-gradient(to bottom,#d9edf7 0,#b9def0 100%);
+	background-repeat: repeat-x;
+	border-color: #9acfea;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.25),0 1px 2px rgba(0,0,0,0.05);
+	color: #31708f;
+	background-color: #d9edf7;
+	background-color: #dff0d8;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: block;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.3;
 
 }
 
 .can {
-	background-color: green;
-	color: white;
+	background-image: linear-gradient(to bottom,#dff0d8 0,#c8e5bc 100%);
+	background-repeat: repeat-x;
+	border-color: #b2dba1;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.25),0 1px 2px rgba(0,0,0,0.05);
+	color: #3c763d;
+	background-color: #dff0d8;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: block;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.3;
 }
 .cant {
-	background-color: red;
-	color: yellow;
+	background-image: linear-gradient(to bottom,#f2dede 0,#e7c3c3 100%);
+	background-repeat: repeat-x;
+	border-color: #dca7a7;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.25),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.25),0 1px 2px rgba(0,0,0,0.05);
+	color: #a94442;
+	background-color: #f2dede;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: block;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.3;
 }
+

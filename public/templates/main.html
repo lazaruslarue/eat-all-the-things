@@ -1,15 +1,15 @@
 <h3>EAT ALL THE THINGS</h3>
 
+<div class='inventory'>
+  <h4>your ingredients:</h4>
+  <div ng-repeat="food in items " > {{food.name}} </div>
+</div>
 <div class='can' ng-repeat="recipe in menu | filter:({haveIngredients: 'true'})" > <h4> You can make: {{recipe.name}} </h4>
 <div> Can be made: {{ recipe.haveIngredients }} </div>
   <div ng-repeat="ingredient in recipe.ingredients" > {{ ingredient.name }} </div>
   <div> Here's what to do: {{ recipe.instructions }} </div>
 </div>
 
-<div id='inventory'>
-  <h4>your ingredients:</h4>
-  <div ng-repeat="food in items " > {{food.name}} </div>
-</div>
 <div class='cant' ng-repeat="recipe in menu | filter:({haveIngredients: 'false'})" > <h4> You cant make: {{recipe.name}} </h4>
 <div> Can be made: {{ recipe.haveIngredients }} </div>
   <div ng-repeat="ingredient in recipe.ingredients" > {{ ingredient.name }} </div>
