@@ -11,7 +11,7 @@ angular.module('recipeApp')
     var compareRecipeInventory = function(recipe) {
       var truth = true;
       for (var t in recipe.ingredients ) {
-        if (itemArray.indexOf(recipe.ingredients[t].type) === -1) {
+        if (itemArray.indexOf(recipe.ingredients[t].name) === -1) {
           truth = false;
         }
       }
@@ -24,7 +24,7 @@ angular.module('recipeApp')
       }
     }
     doAllRecipes($scope.menu);
-
+    $cookieStore.put('menu', $scope.menu);
   })
   .controller('Recipe', function($scope, $http, $cookieStore) {
     //TODO: put this in a factory service
