@@ -1,12 +1,12 @@
 <h2>Inventory</h2>
 
 
+<form class="inventory">
 <h3>add inventory</h3>
-<form>
-  Ingredient: <input type="text" ng-model="ingredient.name" /><br/>
-  Type: <input type="text" ng-model="ingredient.type" /><br/>
-  Amount: <input type="text" ng-model="ingredient.amount" /><br/>
-  How's it measured? <input type="text" ng-model="ingredient.measure" /><br/>
+  Ingredient: <input type="text" ng-model="ingredient.name" placeholder="name" /><br/>
+  Type: <input type="text" ng-model="ingredient.type" placeholder="type" /><br/>
+  Amount: <input type="text" ng-model="ingredient.amount" placeholder="amount"/><br/>
+  How's it measured? <input type="text" ng-model="ingredient.measure" placeholder="measure"/><br/>
   <button ng-click="update(ingredient)">Add it</button>
 </form>
 <pre>form = {{ ingredient | json}}</pre>

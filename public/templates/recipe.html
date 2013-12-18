@@ -1,18 +1,22 @@
 <h2>Menu</h2>
 
-
+<div class="inventory">
 <h3>add a recipe</h3>
 <form  >
-  Recipe Name: <input type="text" ng-model="recipe.name" /><br/>
-  <p>What do you need to make it?</p><br/>
+  Recipe Name: </br>
+  <input type="text" ng-model="recipe.name" placeholder="name" /><br/>
+
   <div ng-form="recipe" ng-repeat="ingredient in recipe.ingredients" >
-    Ingredient:<input type="text" ng-model="ingredient.name" />
-    Amount: <input type="number" ng-model="ingredient.amount" />
+    Ingredient: </br>
+    <input type="text" ng-model="ingredient.name" placeholder="ingredient" />
+    Amount: <input type="number" ng-model="ingredient.amount" placeholder="amount" />
     <button ng-click="addItem(ingredient)">+</button>
   </div>
-  Instructions?<input type="text" ng-model="recipe.instructions" /><br/>
+  Instructions?<input type="text" ng-model="recipe.instructions" placeholder="instructions"/><br/>
   <button ng-click="update(recipe)">Add to menu</button>
 </form>
+</div>
+<div>
 <pre>form = {{ recipe | json}}</pre>
 
 <h3>Existing menu</h3>
