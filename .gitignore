@@ -4,6 +4,7 @@ todo.md
 objects
 refs
 *.log
+public/lib/CoffeeScript_files
 
 ###defaults###
 
